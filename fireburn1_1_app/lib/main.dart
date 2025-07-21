@@ -2,7 +2,8 @@ import 'package:fireburn1_1_app/register/SelectRole.dart';
 import 'package:flutter/material.dart';
 import 'package:fireburn1_1_app/login.dart';
 import 'burn_request_page.dart';
-import 'settings_page.dart';
+import 'package:fireburn1_1_app/select_location_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const WelcomePage(),
-    );
+  debugShowCheckedModeBanner: false,
+  home: const WelcomePage(),
+  routes: {
+    '/select_location': (context) => const SelectLocationPage(), // ✅ เพิ่ม route นี้
+  },
+);
   }
 }
 
